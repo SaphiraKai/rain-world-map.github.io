@@ -74,7 +74,7 @@
       /* re-center after wrap */
       margin-left: auto;
       margin-right: auto;
-      padding: 4px;
+      padding: 24px;
       transition: width 0.4s;
     }
 
@@ -142,11 +142,11 @@
     <div class="rw-bigtext" style="text-align: center; margin-top:0.5em;">I'm lost as...</div>
     <div id="scuglist-group">
       <div>
-        <h2>Vanilla</h2>
+        <h3>Vanilla</h3>
         <div id="scuglist-vanilla"></div>
       </div>
       <div>
-        <h2>Downpour</h2>
+        <h3>Downpour</h3>
         <div id="scuglist-dlc"></div>
       </div>
     </div>
@@ -166,8 +166,9 @@
           }
           vanilla_html += `
             <label class="difficulty-btn">
-                <input type="radio" class="rw-ui" name="difficulties" onclick="selectDifficulty('${slugcatName}');" autocomplete="off">
-                <img src="./resources/icons/${icon}.png">
+              ${slugcatName}
+              <input type="radio" class="rw-ui" name="difficulties" onclick="selectDifficulty('${slugcatName}');" autocomplete="off">
+              <img src="./resources/icons/${icon}.png">
             </label>
 `;
           document.getElementById('scuglist-vanilla').innerHTML = vanilla_html;
