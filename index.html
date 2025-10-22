@@ -164,36 +164,36 @@
           } else {
             console.log("missing icon for " + slugcatName);
           }
-          var pretty_name = "";
+          var prettyName = "";
           switch (slugcatName) {
             case "yellow":
-              pretty_name = "Monk";
+              prettyName = "Monk";
               break;
             case "white":
-              pretty_name = "Survivor";
+              prettyName = "Survivor";
               break;
             case "red":
-              pretty_name = "Hunter";
+              prettyName = "Hunter";
               break;
             case "gourmand":
-              pretty_name = "Gourmand";
+              prettyName = "Gourmand";
               break;
             case "artificer":
-              pretty_name = "Artificer";
+              prettyName = "Artificer";
               break;
             case "rivulet":
-              pretty_name = "Rivulet";
+              prettyName = "Rivulet";
               break;
             case "spear":
-              pretty_name = "Spearmaster";
+              prettyName = "Spearmaster";
               break;
             case "saint":
-              pretty_name = "Saint";
+              prettyName = "Saint";
               break;
           }
           vanilla_html += `
             <label class="difficulty-btn">
-              ${slugcatName}
+              ${prettyName}
               <input type="radio" class="rw-ui" name="difficulties" onclick="selectDifficulty('${slugcatName}');" autocomplete="off">
               <img src="./resources/icons/${icon}.png">
             </label>
