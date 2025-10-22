@@ -141,8 +141,14 @@
     <div class="rw-title">Rain World</div>
     <div class="rw-bigtext" style="text-align: center; margin-top:0.5em;">I'm lost as...</div>
     <div id="scuglist-group">
-      <div id="scuglist-vanilla"></div>
-      <div id="scuglist-dlc"></div>
+      <div>
+        <h2>Vanilla</h2>
+        <div id="scuglist-vanilla"></div>
+      </div>
+      <div>
+        <h2>Downpour</h2>
+        <div id="scuglist-dlc"></div>
+      </div>
     </div>
 
     <script>
@@ -159,10 +165,11 @@
             console.log("missing icon for " + slugcatName);
           }
           vanilla_html += `
-<label class="difficulty-btn">
-    <input type="radio" class="rw-ui" name="difficulties" onclick="selectDifficulty('${slugcatName}');" autocomplete="off">
-    <img src="./resources/icons/${icon}.png">
-</label>`;
+            <label class="difficulty-btn">
+                <input type="radio" class="rw-ui" name="difficulties" onclick="selectDifficulty('${slugcatName}');" autocomplete="off">
+                <img src="./resources/icons/${icon}.png">
+            </label>
+`;
           document.getElementById('scuglist-vanilla').innerHTML = vanilla_html;
           document.getElementById('scuglist-dlc').innerHTML = vanilla_html;
         }
